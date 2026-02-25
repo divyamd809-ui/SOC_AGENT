@@ -14,3 +14,8 @@ def analyze():
     result = process_log(log)
 
     return jsonify(result)
+from flask import render_template
+
+@app.route("/")
+def dashboard():
+    return render_template("dashboard.html")
